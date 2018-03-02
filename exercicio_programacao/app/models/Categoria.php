@@ -11,10 +11,10 @@ class Categoria
     public $id;
     public $nome;
     public $descricao;
-    public $foto;
 
 
-    public function __construct($id, $nome, $descricao)
+
+    public function __construct($id=null, $nome=null, $descricao=null)
     {
         $this->id = $id;
         $this->nome = $nome;
@@ -119,16 +119,4 @@ class Categoria
     public $categoria;
 }
 
-    //teste
 
-    //Criando sem construct
-    $cl = new Categoria();
-    $cl->setId(1);
-    $cl->setNome("Teste");
-    $cl->setDescricao("Objeto bla bla");
-    var_dump($cl);
-
-    //Criando com construct
-
-    $c2 = new Categoria(2, "Categoria 2", "Teste");
-    var_dump($c2);
